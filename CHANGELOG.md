@@ -1,5 +1,12 @@
 # Semantic Release Test Changelog
 
+## [1.0.3](https://github.com/sadok-f/semantic-release-test/compare/1.0.2...1.0.3) (2024-10-21)
+
+
+### Bug Fixes
+
+* add missing composer.json ([a7f91e6](https://github.com/sadok-f/semantic-release-test/commit/a7f91e682074b3a5da35b7e645d2330736aa2ec3))
+
 ## [1.0.2](https://github.com/sadok-f/semantic-release-test/compare/1.0.1...1.0.2) (2024-10-21)
 
 
