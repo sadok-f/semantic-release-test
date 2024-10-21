@@ -1,9 +1,11 @@
 {
   "branches": ["main"],
+  "tagFormat": "${version}",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/github",
+    "@ambimax/semantic-release-composer",
     [
       "@semantic-release/changelog",
       {
@@ -15,12 +17,6 @@
       {
         "assets": ["CHANGELOG.md", "composer.json"],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }
-    ],
-    [
-      "@ambimax/semantic-release-composer",
-      {
-        "skipOnMissingComposerJson": true
       }
     ]
   ]
