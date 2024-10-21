@@ -1,5 +1,12 @@
 # Semantic Release Test Changelog
 
+## [1.0.4](https://github.com/sadok-f/semantic-release-test/compare/1.0.3...1.0.4) (2024-10-21)
+
+
+### Bug Fixes
+
+* tying out adding ref for master ([8a40d32](https://github.com/sadok-f/semantic-release-test/commit/8a40d325f51b38168deb6fa1811c7e2b94a591fd))
+
 ## [1.0.3](https://github.com/sadok-f/semantic-release-test/compare/1.0.2...1.0.3) (2024-10-21)
 
 
