@@ -1,5 +1,12 @@
 # Semantic Release Test Changelog
 
+## [1.0.1](https://github.com/sadok-f/semantic-release-test/compare/1.0.0...1.0.1) (2024-10-21)
+
+
+### Bug Fixes
+
+* add another step ([94b6bd2](https://github.com/sadok-f/semantic-release-test/commit/94b6bd2e335ff4342385061a9dbf94dfe18ea9e6))
+
 # 1.0.0 (2024-10-21)
 
 
