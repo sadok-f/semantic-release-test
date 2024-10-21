@@ -23,6 +23,7 @@ jobs:
         run: npm ci
 
       - name: Semantic Release
+        id: tag_version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
@@ -43,7 +44,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/semantic-release-test:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/semantic-release-test:${{ env.SEMANTIC_VERSION }}
-
-env:
-  SEMANTIC_VERSION: ${{ steps.semantic.outputs.new_release_version }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/semantic-release-test:${{ steps.tag_version.outputs.new_release_version }}
