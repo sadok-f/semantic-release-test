@@ -22,8 +22,15 @@ jobs:
       - name: Install dependencies
         run: npm install @semantic-release/git @semantic-release/changelog @iwavesmedia/semantic-release-composer -D
 
-      - name: Semantic Release with GitHub Token
+      - name: Dry run to get the next release version
         id: tag_version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          NEXT_TAG_VERSION=$(npx semantic-release --dry-run | grep 'The next release version is' | sed -E 's/.* ([[:digit:].]+)$/\1/')
+          echo "new_tag_version=$NEXT_TAG_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Semantic Release with GitHub Token
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
@@ -49,4 +56,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/semantic-release-test:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/semantic-release-test:${{ steps.tag_version.outputs.nextVer }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/semantic-release-test:${{ steps.tag_version.outputs.new_tag_version }}
