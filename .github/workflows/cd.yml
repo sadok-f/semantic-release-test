@@ -25,7 +25,7 @@ jobs:
       - name: Semantic Release with GitHub Token
         id: tag_version
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
 
       - name: Set up Docker Buildx
