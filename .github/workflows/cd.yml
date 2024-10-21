@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install @semantic-release/git @semantic-release/changelog @iwavesmedia/semantic-release-composer -D
 
-      - name: Semantic Release
+      - name: Semantic Release with GitHub Token
         id: tag_version
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
