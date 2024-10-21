@@ -1,5 +1,12 @@
 # Semantic Release Test Changelog
 
+## [1.0.2](https://github.com/sadok-f/semantic-release-test/compare/1.0.1...1.0.2) (2024-10-21)
+
+
+### Bug Fixes
+
+* add dry-run step ([abeeb17](https://github.com/sadok-f/semantic-release-test/commit/abeeb17ed7cbfc7bf71d2be895c658ccca78b0b1))
+
 ## [1.0.1](https://github.com/sadok-f/semantic-release-test/compare/1.0.0...1.0.1) (2024-10-21)
 
 
